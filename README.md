@@ -1,4 +1,4 @@
-# Tech Heros
+# Tech Heroes
 
 [![build status](https://img.shields.io/travis/erikras/react-redux-universal-hot-example/master.svg?style=flat-square)](https://travis-ci.org/erikras/react-redux-universal-hot-example)
 
@@ -6,7 +6,7 @@
 
 ## About
 
-Tech Heros uses the following technologies:
+Tech Heroes uses the following technologies:
 
 * ~~Isomorphic~~ [Universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) rendering
 * Both client and server make calls to load data from separate API server

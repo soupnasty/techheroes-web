@@ -1,6 +1,6 @@
 {
   "name": "react-redux-universal-hot-example",
-  "description": "Tech Heros take over",
+  "description": "Tech Heroes take over",
   "author": "Taylor Masterson, Andrew Campbell, Andrew Campbell's roommate",
   "license": "MIT",
   "version": "0.1.0",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/soupnasty/techheroes-web"
   },
-  "homepage": "https://techheros.com",
+  "homepage": "https://techheroes.com",
   "main": "bin/server.js",
   "scripts": {
     "start": "concurrent --kill-others \"npm run start-prod\" \"npm run start-prod-api\"",

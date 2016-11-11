@@ -15,17 +15,17 @@ module.exports = Object.assign({
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
-    title: 'Tech Heros',
+    title: 'Tech Heroes',
     description: 'The greatest app in all the world.',
     head: {
-      titleTemplate: 'Tech Heros: %s',
+      titleTemplate: 'Tech Heroes: %s',
       meta: [
         {name: 'description', content: 'The greatet app in all the world.'},
         {charset: 'utf-8'},
-        {property: 'og:site_name', content: 'Tech Heros'},
+        {property: 'og:site_name', content: 'Tech Heroes'},
         {property: 'og:image', content: 'https://react-redux.herokuapp.com/logo.jpg'},
         {property: 'og:locale', content: 'en_US'},
-        {property: 'og:title', content: 'Tech Heros'},
+        {property: 'og:title', content: 'Tech Heroes'},
         {property: 'og:description', content: 'The greatet app in all the world.'},
         {property: 'og:card', content: 'summary'},
         {property: 'og:site', content: '@tjmasterson'},
