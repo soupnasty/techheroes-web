@@ -5,11 +5,11 @@ import {
     App,
     Chat,
     Home,
-    Widgets,
+    // Widgets,
     About,
     Login,
     LoginSuccess,
-    Survey,
+    // Survey,
     NotFound,
   } from 'containers';
 
