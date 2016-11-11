@@ -6,7 +6,7 @@
 
 ## About
 
-This is a starter boilerplate app I've put together using the following technologies:
+Tech Heros uses the following technologies:
 
 * ~~Isomorphic~~ [Universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) rendering
 * Both client and server make calls to load data from separate API server
@@ -29,8 +29,6 @@ This is a starter boilerplate app I've put together using the following technolo
 * [react-helmet](https://github.com/nfl/react-helmet) to manage title and meta tag information on both server and client
 * [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) to allow require() work for statics both on client and server
 * [mocha](https://mochajs.org/) to allow writing unit tests for the project.
-
-I cobbled this together from a wide variety of similar "starter" repositories. As I post this in June 2015, all of these libraries are right at the bleeding edge of web development. They may fall out of fashion as quickly as they have come into it, but I personally believe that this stack is the future of web development and will survive for several years. I'm building my new projects like this, and I recommend that you do, too.
 
 ## Installation
 
@@ -69,7 +67,7 @@ npm run start
 
 ## Demo
 
-A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku).
+A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/soupnasty/techheroes-web/tree/heroku).
 
 ## Documentation
 
@@ -101,7 +99,7 @@ We also spit out the `redux` state into a global `window.__data` variable in the
 
 #### Server-side Data Fetching
 
-The [redux-async-connect](https://www.npmjs.com/package/redux-async-connect) package exposes an API to return promises that need to be fulfilled before a route is rendered. It exposes a `<ReduxAsyncConnect />` container, which wraps our render tree on both [server](https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/server.js) and [client](https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/client.js). More documentation is available on the [redux-async-connect](https://www.npmjs.com/package/redux-async-connect) page.
+The [redux-async-connect](https://www.npmjs.com/package/redux-async-connect) package exposes an API to return promises that need to be fulfilled before a route is rendered. It exposes a `<ReduxAsyncConnect />` container, which wraps our render tree on both [server](https://github.com/soupnasty/techheroes-web/blob/master/src/server.js) and [client](https://github.com/soupnasty/techheroes-web/blob/master/src/client.js). More documentation is available on the [redux-async-connect](https://www.npmjs.com/package/redux-async-connect) page.
 
 #### Client Side
 
@@ -109,7 +107,7 @@ The client side entry point is reasonably named `client.js`. All it does is load
 
 #### Redux Middleware
 
-The middleware, [`clientMiddleware.js`](https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/redux/middleware/clientMiddleware.js), serves two functions:
+The middleware, [`clientMiddleware.js`](https://github.com/soupnasty/techheroes-web/blob/master/src/redux/middleware/clientMiddleware.js), serves two functions:
 
 1. To allow the action creators access to the client API facade. Remember this is the same on both the client and the server, and cannot simply be `import`ed because it holds the cookie needed to maintain session on server-to-server requests.
 2. To allow some actions to pass a "promise generator", a function that takes the API client and returns a promise. Such actions require three action types, the `REQUEST` action that initiates the data loading, and a `SUCCESS` and `FAILURE` action that will be fired depending on the result of the promise. There are other ways to accomplish this, some discussed [here](https://github.com/rackt/redux/issues/99), which you may prefer, but to the author of this example, the middleware way feels cleanest.
@@ -117,8 +115,7 @@ The middleware, [`clientMiddleware.js`](https://github.com/erikras/react-redux-u
 #### Redux Modules... *What the Duck*?
 
 The `src/redux/modules` folder contains "modules" to help
-isolate concerns within a Redux application (aka [Ducks](https://github.com/erikras/ducks-modular-redux), a Redux Style Proposal that I came up with). I encourage you to read the
-[Ducks Docs](https://github.com/erikras/ducks-modular-redux) and provide feedback.
+isolate concerns within a Redux application (aka [Ducks](https://github.com/erikras/ducks-modular-redux)
 
 #### API Server
 
@@ -130,7 +127,7 @@ To understand how the data and action bindings get into the components – there
 
 #### Images
 
-Now it's possible to render the image both on client and server. Please refer to issue [#39](https://github.com/erikras/react-redux-universal-hot-example/issues/39) for more detail discussion, the usage would be like below (super easy):
+Now it's possible to render the image both on client and server. Please refer to issue [#39](https://github.com/soupnasty/techheroes-web/issues/39) for more detail discussion, the usage would be like below (super easy):
 
 ```javascript
 let logoImage = require('./logo.png');
@@ -246,8 +243,3 @@ Although this isn't a library, we recently started versioning to make it easier 
 I am more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :)
 
 If you would like to submit a pull request, please make an effort to follow the guide in [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-Thanks for checking this out.
-
-– Erik Rasmussen, [@erikras](https://twitter.com/erikras)
